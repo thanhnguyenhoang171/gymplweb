@@ -26,10 +26,7 @@ export class CustomerService {
   constructor(private http: HttpClient) {}
 
   getImagePath(imagePath: string): string {
-    return imagePath.replace(
-      `${environment.imagePath}`, 
-      '/assets/'
-    );
+    return imagePath.replace(`${environment.imagePath}`, 'assets');
   }
 
   getCustomers(): Observable<CustomerData[]> {
